@@ -146,7 +146,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="823" y="761"/>
+            <point key="canvasLocation" x="-602" y="761"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="G0E-1f-mOa">
@@ -271,7 +271,7 @@
         <!--Rating-->
         <scene sceneID="Qz6-j3-uyh">
             <objects>
-                <viewController id="WkK-I5-XNa" sceneMemberID="viewController">
+                <viewController id="WkK-I5-XNa" customClass="RatingVC" customModule="rulletka" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Al9-7x-fzb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -282,7 +282,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZVJ-Me-LjL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="113" y="761"/>
+            <point key="canvasLocation" x="774" y="761"/>
         </scene>
         <!--Game-->
         <scene sceneID="w62-99-RRj">
@@ -648,7 +648,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fQg-nQ-DMV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-602.39999999999998" y="761.46926536731644"/>
+            <point key="canvasLocation" x="113" y="761"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jyu-4n-nzV">

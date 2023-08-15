@@ -13,6 +13,9 @@
 		FA24D5612A8932AB0011A25E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA24D55F2A8932AB0011A25E /* Main.storyboard */; };
 		FA24D5632A8932B30011A25E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA24D5622A8932B30011A25E /* Assets.xcassets */; };
 		FA24D5662A8932B30011A25E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA24D5642A8932B30011A25E /* LaunchScreen.storyboard */; };
+		FA610BCB2A8BD4F2004EE094 /* RatingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA610BCA2A8BD4F1004EE094 /* RatingVC.swift */; };
+		FA610BCF2A8BDFA1004EE094 /* RatingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA610BCE2A8BDFA1004EE094 /* RatingCell.swift */; };
+		FA610BD12A8BF82A004EE094 /* RatingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA610BD02A8BF82A004EE094 /* RatingModel.swift */; };
 		FA68AAA22A895D850009C95E /* UICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68AAA02A895D850009C95E /* UICollectionViewCell.swift */; };
 		FA68AAA32A895D850009C95E /* UIViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68AAA12A895D850009C95E /* UIViewHelper.swift */; };
 		FA68AAA52A895F8A0009C95E /* NumbersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68AAA42A895F8A0009C95E /* NumbersModel.swift */; };
@@ -34,6 +37,9 @@
 		FA24D5622A8932B30011A25E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA24D5652A8932B30011A25E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA24D5672A8932B30011A25E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA610BCA2A8BD4F1004EE094 /* RatingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingVC.swift; sourceTree = "<group>"; };
+		FA610BCE2A8BDFA1004EE094 /* RatingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingCell.swift; sourceTree = "<group>"; };
+		FA610BD02A8BF82A004EE094 /* RatingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingModel.swift; sourceTree = "<group>"; };
 		FA68AAA02A895D850009C95E /* UICollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewCell.swift; sourceTree = "<group>"; };
 		FA68AAA12A895D850009C95E /* UIViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewHelper.swift; sourceTree = "<group>"; };
 		FA68AAA42A895F8A0009C95E /* NumbersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersModel.swift; sourceTree = "<group>"; };
@@ -128,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				FA68AAA42A895F8A0009C95E /* NumbersModel.swift */,
+				FA610BD02A8BF82A004EE094 /* RatingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -135,7 +142,10 @@
 		FA68AAAC2A89622A0009C95E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FA9E3E5A2A89377A009119F6 /* AuthViewController.swift */,
+				FA24D55D2A8932AB0011A25E /* SettingsVC.swift */,
 				FAF2C9D42A89519000B88E37 /* GameVC.swift */,
+				FA610BCA2A8BD4F1004EE094 /* RatingVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -145,6 +155,7 @@
 			children = (
 				FA68AAA72A89621E0009C95E /* NumberCollectionViewCell.swift */,
 				FA68AAA82A89621E0009C95E /* NumberCollectionViewCell.xib */,
+				FA610BCE2A8BDFA1004EE094 /* RatingCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -154,8 +165,6 @@
 			children = (
 				FA24D55F2A8932AB0011A25E /* Main.storyboard */,
 				FA68AAA62A895FF40009C95E /* GameScreen */,
-				FA24D55D2A8932AB0011A25E /* SettingsVC.swift */,
-				FA9E3E5A2A89377A009119F6 /* AuthViewController.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -281,6 +290,9 @@
 				FA68AAA92A89621E0009C95E /* NumberCollectionViewCell.swift in Sources */,
 				FA24D55E2A8932AB0011A25E /* SettingsVC.swift in Sources */,
 				FA68AAA32A895D850009C95E /* UIViewHelper.swift in Sources */,
+				FA610BD12A8BF82A004EE094 /* RatingModel.swift in Sources */,
+				FA610BCF2A8BDFA1004EE094 /* RatingCell.swift in Sources */,
+				FA610BCB2A8BD4F2004EE094 /* RatingVC.swift in Sources */,
 				FA68AAA52A895F8A0009C95E /* NumbersModel.swift in Sources */,
 				FA68AAA22A895D850009C95E /* UICollectionViewCell.swift in Sources */,
 				FAF2C9D52A89519000B88E37 /* GameVC.swift in Sources */,

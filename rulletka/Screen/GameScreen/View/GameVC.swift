@@ -79,22 +79,12 @@ class GameVC: UIViewController {
             self.balance = snapshot?.value as? Int ?? 2000
         });
         
-        ref.child("users").getData(completion:  { error, snapshot in
+        ref.child("users/\(userID)/name").getData(completion:  { error, snapshot in
             guard error == nil else {
                 print(error!.localizedDescription)
                 return;
             }
             self.nameLabel.text = snapshot?.value as? String ?? "Name"
-            //            MARK: - for rangerView (TableView)
-            //            if let users = snapshot?.value as? [String: Any] {
-            //                for id in users.keys {
-            //                    if let user = users[id] as?  [String: Any] {
-            //                        let name = user["name"] as? String ?? ""
-            //                        let balance = user["balance"] as? Int ?? 0
-            //                        print("name is -", name, "balance is -", balance)
-            //                    }
-            //                }
-            //            }
         });
         
         bet = 10

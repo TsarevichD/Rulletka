@@ -8,7 +8,8 @@ target 'rulletka' do
 pod 'Firebase/Auth', '9.6.0'
 pod 'FirebaseFirestore', '9.6.0'
 pod 'Firebase/Database', '9.6.0'
-
+pod 'SnapKit' 
+ 
   # Pods for rulletka
 
 end
