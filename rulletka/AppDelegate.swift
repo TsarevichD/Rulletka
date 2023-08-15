@@ -38,9 +38,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let newvc = storyboard.instantiateViewController(withIdentifier: "tabBarController") as! UITabBarController
         window?.rootViewController = newvc
     }
-
-
-
-
 }
 

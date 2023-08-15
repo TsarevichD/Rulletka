@@ -42,7 +42,7 @@ class SettingsVC: UIViewController {
             }
             self.balance = snapshot?.value as? Int ?? 0
         });
-    
+        
         ref.child("users/\(userID)/name").getData(completion:  { error, snapshot in
             guard error == nil else {
                 print(error!.localizedDescription)
@@ -62,7 +62,7 @@ class SettingsVC: UIViewController {
         SKStoreReviewController.requestReview()
         
     }
-
+    
     @IBAction func shareGameAction(_ sender: Any) {
         
         let items:[Any] = ["Rulletka for Traffbraza"]
@@ -74,23 +74,23 @@ class SettingsVC: UIViewController {
     
     @IBAction func deleteAccountAction(_ sender: Any) {
         let user = Auth.auth().currentUser
-           
-           let alertController = UIAlertController(title: "Удаление аккаунта", message: "Вы уверены, что хотите удалить аккаунт?", preferredStyle: .alert)
-           
-           alertController.addAction(UIAlertAction(title: "Отмена", style: .cancel, handler: nil))
-           
-           alertController.addAction(UIAlertAction(title: "Удалить", style: .destructive, handler: { _ in
-               user?.delete { error in
-                   if let error = error {
-                       print("Ошибка при удалении аккаунта: \(error)")
-                   } else {
-                       print("Аккаунт успешно удален")
-                       // Также уберите данные пользователя из базы данных, если необходимо
-                   }
-               }
-           }))
-           
-           present(alertController, animated: true, completion: nil)
+        
+        let alertController = UIAlertController(title: "Удаление аккаунта", message: "Вы уверены, что хотите удалить аккаунт?", preferredStyle: .alert)
+        
+        alertController.addAction(UIAlertAction(title: "Отмена", style: .cancel, handler: nil))
+        
+        alertController.addAction(UIAlertAction(title: "Удалить", style: .destructive, handler: { _ in
+            user?.delete { error in
+                if let error = error {
+                    print("Ошибка при удалении аккаунта: \(error)")
+                } else {
+                    print("Аккаунт успешно удален")
+                    // Также уберите данные пользователя из базы данных, если необходимо
+                }
+            }
+        }))
+        
+        present(alertController, animated: true, completion: nil)
     }
     
     

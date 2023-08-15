@@ -23,7 +23,7 @@ class AuthViewController: UIViewController {
             }
         }
     }
-
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
@@ -34,7 +34,7 @@ class AuthViewController: UIViewController {
         nameField.delegate = self
         emailField.delegate = self
         passwordField.delegate = self
-         
+        
     }
     
     @IBAction func switchLogin(_ sender: UIButton) {
@@ -45,7 +45,7 @@ class AuthViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         present(alert, animated: true)
     }
-  
+    
 }
 
 extension AuthViewController: UITextFieldDelegate {
@@ -56,30 +56,30 @@ extension AuthViewController: UITextFieldDelegate {
         let balance = 2000
         
         if (signUp){
-        if(!name.isEmpty && !email.isEmpty && !password.isEmpty){
-            Auth.auth().createUser(withEmail: email, password: password) { (result, error)  in
-                if error == nil {
-                    if let result = result{
-                        print(result.user.uid)
-                        let ref = Database.database().reference().child("users")
-                        ref.child(result.user.uid).updateChildValues(["name" : name, "email" : email, "balance" : balance])
+            if(!name.isEmpty && !email.isEmpty && !password.isEmpty){
+                Auth.auth().createUser(withEmail: email, password: password) { (result, error)  in
+                    if error == nil {
+                        if let result = result{
+                            print(result.user.uid)
+                            let ref = Database.database().reference().child("users")
+                            ref.child(result.user.uid).updateChildValues(["name" : name, "email" : email, "balance" : balance])
+                            self.dismiss(animated: true)
+                        }
+                    }
+                }
+            }else{
+                showAlert()
+            }
+        }else{
+            if( !email.isEmpty && !password.isEmpty){
+                Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+                    if error == nil {
                         self.dismiss(animated: true)
                     }
                 }
+            }else{
+                showAlert()
             }
-        }else{
-            showAlert()
-        }
-    }else{
-        if( !email.isEmpty && !password.isEmpty){
-            Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-                if error == nil {
-                    self.dismiss(animated: true)
-                }
-            }
-        }else{
-            showAlert()
-        }
         }
         
         return true
